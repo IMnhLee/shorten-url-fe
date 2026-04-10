@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 import { Providers } from "@/components/providers";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
@@ -32,9 +33,9 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Providers>
           <header className="border-b px-6 py-4">
-            <a href="/" className="text-lg font-bold">
+            <Link href="/" className="text-lg font-bold">
               Shorten URL
-            </a>
+            </Link>
           </header>
           <main className="flex-1">{children}</main>
           <Toaster />
