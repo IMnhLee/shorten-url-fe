@@ -6,9 +6,9 @@ import { UrlTable } from "@/components/url-table";
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-4xl px-6 py-12 space-y-10">
+    <div className="mx-auto max-w-5xl px-6 py-16 md:py-20 space-y-16">
       <ShortenForm />
-      <hr />
+      <div className="border-t" />
       <Suspense>
         <UrlTable />
       </Suspense>

@@ -66,7 +66,7 @@ export default function UrlDetailPage() {
   }
 
   return (
-    <div className="mx-auto max-w-4xl px-6 py-12 space-y-8">
+    <div className="mx-auto max-w-5xl px-6 py-16 md:py-20 space-y-10">
       <Link
         href="/"
         className="text-sm text-blue-600 hover:underline dark:text-blue-400"
@@ -75,13 +75,15 @@ export default function UrlDetailPage() {
       </Link>
 
       {/* URL Info Card */}
-      <div className="rounded-md border p-6 space-y-4">
-        <div className="flex items-start justify-between gap-4">
-          <div className="space-y-3 min-w-0">
+      <div className="rounded-lg border p-8 space-y-6">
+        <div className="flex items-start justify-between gap-6">
+          <div className="space-y-5 min-w-0 flex-1">
             <div>
-              <p className="text-xs text-muted-foreground">Short URL</p>
+              <p className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
+                Short URL
+              </p>
               <div className="flex items-center gap-2">
-                <p className="text-lg font-medium text-blue-600 dark:text-blue-400">
+                <p className="text-2xl font-semibold text-blue-600 dark:text-blue-400 truncate">
                   {urlData.shortUrl}
                 </p>
                 <Button
@@ -94,10 +96,12 @@ export default function UrlDetailPage() {
               </div>
             </div>
             <div>
-              <p className="text-xs text-muted-foreground">Original URL</p>
-              <p className="text-sm break-all">{urlData.originalUrl}</p>
+              <p className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
+                Original URL
+              </p>
+              <p className="text-base break-all">{urlData.originalUrl}</p>
             </div>
-            <div className="flex gap-6 text-sm text-muted-foreground">
+            <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-muted-foreground">
               <span>
                 Created:{" "}
                 {new Date(urlData.createdAt).toLocaleDateString("en-US", {
@@ -117,9 +121,13 @@ export default function UrlDetailPage() {
             </div>
           </div>
 
-          <div className="text-center rounded-md bg-muted px-6 py-4 shrink-0">
-            <p className="text-3xl font-bold">{urlData.clickCount}</p>
-            <p className="text-xs text-muted-foreground">Total Clicks</p>
+          <div className="text-center rounded-lg bg-muted px-8 py-6 shrink-0">
+            <p className="text-5xl font-bold tabular-nums">
+              {urlData.clickCount}
+            </p>
+            <p className="text-xs uppercase tracking-wide text-muted-foreground mt-1">
+              Total Clicks
+            </p>
           </div>
         </div>
       </div>

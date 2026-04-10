@@ -53,8 +53,8 @@ export function StatsPanels({ stats }: { stats: UrlStats }) {
 
   return (
     <div className="grid gap-6 md:grid-cols-2">
-      <div className="rounded-md border p-4 space-y-3">
-        <h3 className="font-semibold text-sm">Top Referrers</h3>
+      <div className="rounded-lg border p-6 space-y-4">
+        <h3 className="font-semibold text-lg">Top Referrers</h3>
         {referrerItems.length > 0 ? (
           <BarChart items={referrerItems} />
         ) : (
@@ -62,8 +62,8 @@ export function StatsPanels({ stats }: { stats: UrlStats }) {
         )}
       </div>
 
-      <div className="rounded-md border p-4 space-y-3">
-        <h3 className="font-semibold text-sm">Top User Agents</h3>
+      <div className="rounded-lg border p-6 space-y-4">
+        <h3 className="font-semibold text-lg">Top User Agents</h3>
         {userAgentItems.length > 0 ? (
           <BarChart items={userAgentItems} />
         ) : (

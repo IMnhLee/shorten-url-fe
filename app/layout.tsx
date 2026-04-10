@@ -32,10 +32,12 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <Providers>
-          <header className="border-b px-6 py-4">
-            <Link href="/" className="text-lg font-bold">
-              Shorten URL
-            </Link>
+          <header className="border-b">
+            <div className="mx-auto max-w-5xl px-6 py-5">
+              <Link href="/" className="text-xl font-bold tracking-tight">
+                Shorten URL
+              </Link>
+            </div>
           </header>
           <main className="flex-1">{children}</main>
           <Toaster />
