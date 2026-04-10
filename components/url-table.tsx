@@ -117,11 +117,13 @@ export function UrlTable() {
                 </TableCell>
                 <TableCell>
                   <AlertDialog>
-                    <AlertDialogTrigger>
-                      <Button variant="ghost" size="sm" className="text-red-600 hover:text-red-700">
-                        Delete
-                      </Button>
-                    </AlertDialogTrigger>
+                    <AlertDialogTrigger
+                      render={
+                        <Button variant="ghost" size="sm" className="text-red-600 hover:text-red-700">
+                          Delete
+                        </Button>
+                      }
+                    />
                     <AlertDialogContent>
                       <AlertDialogHeader>
                         <AlertDialogTitle>Delete URL?</AlertDialogTitle>
