@@ -1,0 +1,14 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # NEXT_PUBLIC_* is baked into the client bundle at build time.
+        # Set this in an .env file next to this compose file on the server.
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL}
+    image: shorten-url-fe:latest
+    container_name: shorten-url-fe
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8081:8081"
